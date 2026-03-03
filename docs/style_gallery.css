@@ -1,0 +1,203 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F7F4F9; /* Soft Lavender White */
+    color: #3A353D; /* Deep Charcoal-Purple */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+h1, h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    letter-spacing: 8px;
+    font-weight: 400;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 35px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #3A353D;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: opacity 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 0.6;
+}
+
+
+/* Intro Section */
+.intro {
+    padding: 10px ;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 1 rem;
+    margin-bottom: 25px;
+    color: #8E8294; /* Amethyst Accent */
+}
+
+/* Art Gallery Section */
+.Art {
+    background-color: #F7F4F9;
+}
+
+/* Gallery Grid */
+.Art .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    padding: 0 8% 120px 8%;
+}
+
+/* Individual Artwork */
+.Art .item img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.Art .item:hover img {
+    transform: scale(1.02);
+}
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(58,53,61,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Box */
+.modal-box {
+    background: #F7F4F9;
+    width: 75%;
+    max-width: 1000px;
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    position: relative;
+}
+
+/* Image Side */
+.modal-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Description Side */
+.modal-description {
+    flex: 1;
+}
+
+.modal-description h2 {
+    color: #8E8294;
+    margin-bottom: 20px;
+}
+
+.modal-description p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+}
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        padding: 25px 5%;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Intro spacing */
+    .intro {
+        padding: 80px 10%;
+    }
+
+    /* Gallery grid */
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    /* Modal becomes vertical */
+    .modal-box {
+        flex-direction: column;
+        width: 90%;
+        padding: 20px;
+    }
+
+    .modal-description {
+        text-align: center;
+    }
+
+    .modal-description h2 {
+        font-size: 1.5rem;
+    }
+
+    .close {
+        top: 10px;
+        right: 15px;
+        font-size: 28px;
+    }
+}
+.item img {
+    cursor: pointer;
+}
+.modal {
+    padding: 20px;
+    overflow-y: auto;
+}
