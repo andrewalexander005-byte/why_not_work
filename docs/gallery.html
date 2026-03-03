@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amethyst Art Gallery | By Gibi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_gallery.css">
+    
+    </head>
+    <div id="artModal" class="modal">
+
+    <div class="modal-box">
+
+        <span class="close">&times;</span>
+
+        <div class="modal-image">
+            <img id="modalImg">
+        </div>
+
+        <div class="modal-description">
+            <h2 id="artTitle"></h2>
+            <p id="artDesc"></p>
+        </div>
+
+    </div>
+
+</div>
+    <body>
+     <nav>
+        <div class="logo">GIBI
+            <a href="./index.html"></a>
+        </div>
+        <ul>
+            <li><a href="./gallery.html">The Gallery</a></li>
+            <li><a href="#">Originals</a></li>
+            <li><a href="#">Process</a></li>
+            <li><a href="#">Journal</a></li>
+        </ul>
+    </nav>
+     <section class="intro">
+        <div class="container">
+            <h2>Welcome to the Gallery</h2>
+            <p>Immerse yourself in the vast beauty of this collection </p>
+        </div>
+     </section>
+
+     <section class="Art">
+    <div class="grid">
+
+        <div class="item">
+            <img src="trial1.jpg" class="artwork"
+            data-title="Test 1"
+            data-desc="A woderful description for an actual piece of Art 1"/>
+        </div>
+
+        <div class="item">
+            <img src="trial2.jpg" class="artwork"
+            data-title="Test 2"
+            data-desc="A woderful description for an actual piece of Art 2"/>
+        </div>
+
+        <div class="item">
+            <img src="trial3.jpg" class="artwork"
+            data-title="Test 3"
+            data-desc="A woderful description for an actual piece of Art 3"/>
+        </div>
+
+        <div class="item">
+            <img src="trial4.jpg" class="artwork"
+            data-title="Test 4"
+            data-desc="A woderful description for an actual piece of Art 4"/>
+        </div>
+
+        <div class="item">
+            <img src="trial5.jpg" class="artwork"
+            data-title="Test 5"
+            data-desc="A woderful description for an actual piece of Art 5"/>
+        </div>
+
+    </div>
+</section>
+<script src="gallery_script.js"></script>
+    </body>
+</html>
